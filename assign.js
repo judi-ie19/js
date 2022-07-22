@@ -1,10 +1,10 @@
 class Mkulima{
     constructor(){
-    this.farms = [];
+    this.farm = [];
     this.Vendor= [];
     this.product = [];
-    this.addFarm = (farmId, farmName, farmer, phone, address) => {
-    this.farms.push({farmId,farmName,farmer,phone,address})
+    this.addFarm = (farmId, Name, farmer, phone, address) => {
+    this.farm.push({farmId,Name,farmer,phone,address})
     }
     this.removeFarm = (farmId) => {
     let specific = this.farms.find(item => item.farmId ===farmId);
@@ -14,7 +14,7 @@ class Mkulima{
     this.updateFarm = function(farmId,newFarmId,newFarmName,newFarmerName,newPhone,newAddress){
     let specificFarm = this.farms.find(item => item.farmId ===farmId)
     specificFarm.farmId =newFarmId;
-    specificFarm.farmName =newFarmName;
+    specificFarm.Name =newName;
     specificFarm.farmer =newFarmerName;
     specificFarm.phone =newPhone;
     specificFarm.address =newAddress;
@@ -43,7 +43,7 @@ class Mkulima{
     this.printProducts = ()=>{
     console.log(this.product)
     }
-    this.calculateOrderCost = (productId,quantity)=>{
+    this.calculateorder = (productId,quantity)=>{
     let specificProduct = this.product.find(object=>object.productId===productId);
     console.log(`${quantity} ${specificProduct.productName} for KES ${quantity*specificProduct.price}`);
     }
@@ -51,11 +51,11 @@ class Mkulima{
     }
     
     let farm2 = new Mkulima();
-    farm1.addFarm("123","Ishema","Umuhoza","0789415454", "KK 123 K");
-    farm1.addFarm("023","Icyusa","Mugisha","0782444764", "KK 023 K");
-    farm1.addFarm("003","Ikirezi","Kayitete","078223234", "KN 003 K");
+    farm2.addFarm("100","shirleen","judith","0757497424", "KK 100 K");
+    farm2.addFarm("026","Handel","yasmin","0712435670", "KK 026 K");
+    farm2.addFarm("267","Lydia","leocadia","07657843972", "KN  K");
     console.log(farm1.farms);
     
-    farm1.removeFarm("023");
+    farm2.removeFarm("026");
     
     
