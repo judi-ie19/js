@@ -11,7 +11,7 @@ class Mkulima{
     let farmIndex = this.farms.indexOf(specific);
     this.farms.splice(farmIndex, 1);
     }
-    this.updateFarm = function(farmId,newFarmId,newFarmName,newFarmerName,newPhone,newAddress){
+    this.updateFarm = function(farmId,newFarmId,newName,newFarmerName,newPhone,newAddress){
     let specificFarm = this.farms.find(item => item.farmId ===farmId)
     specificFarm.farmId =newFarmId;
     specificFarm.Name =newName;
@@ -20,7 +20,7 @@ class Mkulima{
     specificFarm.address =newAddress;
     }
     this.getFarm = (Id)=>{
-    console.log(this.farms.find(object=>object.farmId===Id))
+    console.log(this.farm.find(object=>object.farmId===Id))
     }
     this.addProduct = (productId, productName, price) => {
     this.product.push({productId,productName,price})
@@ -51,10 +51,10 @@ class Mkulima{
     }
     
     let farm2 = new Mkulima();
-    farm2.addFarm("100","shirleen","judith","0757497424", "KK 100 K");
-    farm2.addFarm("026","Handel","yasmin","0712435670", "KK 026 K");
-    farm2.addFarm("267","Lydia","leocadia","07657843972", "KN  K");
-    console.log(farm1.farms);
+    farm2.addFarm("100","shirleen","judith","0757497424", "000-01w");
+    farm2.addFarm("026","Handel","yasmin","0712435670", "1234H");
+    farm2.addFarm("267","Lydia","leocadia","07657843972", "0001L");
+    console.log(farm2.farms);
     
     farm2.removeFarm("026");
     
